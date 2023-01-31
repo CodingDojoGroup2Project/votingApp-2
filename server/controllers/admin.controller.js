@@ -10,7 +10,7 @@ module.exports = {
         const newAdmin = await Admin.create(req.body)
         // res.status(201).cookie("adminToken",{
         //     httpOnly: true,expires: new Date(Date.now() + 90000)})
-          res.status(201).json({successMessage: 'User registered', admin: newAdmin})
+          res.status(201).json({newAdmin: newAdmin})
       }
       catch(err) {
         res.status(400).json(err);
